@@ -29,3 +29,10 @@ CREATE RANDOM STREAM devices(
                   device string default 'device'||to_string(rand()%4),
                   temperature float default rand()%1000/10)
 ```
+
+you can query the realtime data as follows:
+
+```sql
+SELECT device, count(*), min(temperature), max(temperature)
+FROM devices GROUP BY device
+```
