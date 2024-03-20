@@ -30,7 +30,7 @@ CREATE RANDOM STREAM devices(
                   temperature float default rand()%1000/10)
 ```
 
-you can query the realtime data as follows:
+you can query the real-time data as follows:
 
 ```sql
 SELECT device, count(*), min(temperature), max(temperature)
